@@ -47,9 +47,10 @@ const [total, taxTotal] = taxCalculation({
     tax: tax, 
 });
 
-console.log('Total:', total);
+//?Comentarios para no duplicar el codigo con export
+//?console.log('Total:', total);
 // console.log('Total:', result [0]);
-console.log('Tax:', taxTotal);
+//?console.log('Tax:', taxTotal);
 // console.log('Tax:', result[1];
 
 
