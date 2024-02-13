@@ -1,4 +1,4 @@
-interface Product{
+export interface Product{
     description: string;
     price: number;
 }
@@ -20,7 +20,7 @@ interface TaxCalculationOptions{
 
 //! Los comentados es la implementacion de la funcion sin destructuring
 // function taxCalculation(options: TaxCalculationOptions):[number,number]{
-    function taxCalculation(options: TaxCalculationOptions):[number,number]{
+   export function taxCalculation(options: TaxCalculationOptions):[number,number]{
         
         const {tax, product} = options;
         let total = 0;
