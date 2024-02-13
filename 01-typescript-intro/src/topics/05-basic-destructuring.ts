@@ -30,12 +30,15 @@ const {
 const {author} = details;
 
 
-console.log('Song', anotherSong);
-console.log('Author', audioPlayer.details.author);
-console.log('year', audioPlayer.details.year);
-console.log('duration', duration);
+// console.log('Song', anotherSong);
+// console.log('Author', audioPlayer.details.author);
+// console.log('year', audioPlayer.details.year);
+// console.log('duration', duration);
 
+const [p1, p2, trunks = 'Not found']: string[] = ['Goku', 'Vegeta'];
+// const trunks = dbz[3] || 'No hay personaje';
 
+console.error('Personaje 3:', trunks);
 
 
 
