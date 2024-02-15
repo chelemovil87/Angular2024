@@ -25,8 +25,6 @@ export class HeroComponent {
   }
 
   resetForm(): void {
-    this.name = 'iroman';
-    this.age = 45;
-  }
 
+  }
 }
