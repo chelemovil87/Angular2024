@@ -48,7 +48,11 @@ export class MainPageComponent   {
     {
       name: 'Chaoz',
       power: 500
+    }];
+    onNewCharacter( character: Character ): void {
+      console.log('MainPage');
+      console.log(character)
     }
-  ];
+
 
 }
