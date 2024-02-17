@@ -5,13 +5,13 @@
     <div class="col">
 
       <!-- onDeleteCharacter es el nombre del evento que se va a emitir -->
-      <dbz-list [characterList]="characters"
-                (onDelete)="onDeleteCharacter($event)"></dbz-list>
+      <dbz-list [characterList]="dbzService.characters"
+                (onDelete)="dbzService.deleteCharacterById($event.toString())"></dbz-list>
     </div>
 </div>
 
 <div class="col">
-  <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-character>
 </div>
 <div class="col">
 </div>
