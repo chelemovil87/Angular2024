@@ -13,7 +13,11 @@ export class GifsService {
   private apiKey:       string = '8mhVOjXZ9EgBi9wj1OAAuygY9e9qXUIJ';
   private serviceUrl:   string = 'http://api.giphy.com/v1/gifs';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.loadLocalStorage();
+    console.log('Service initialized!');
+
+  }
 
   get tagHistory() {
     return [...this._tagsHistory];
@@ -32,6 +36,15 @@ export class GifsService {
 
   private saveLocalStorage():void {
     localStorage.setItem('history', JSON.stringify(this._tagsHistory));
+  }
+
+  private loadLocalStorage():void {
+    if(!localStorage.getItem('history'))return;
+
+    this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
+
+    if(this._tagsHistory.length === 0) return;
+    this.searchTag(this._tagsHistory.splice(0,1)[0]);
   }
 
   public searchTag( tag: string ):void {
