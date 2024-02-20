@@ -1,4 +1,7 @@
 <input
-type="text"
-[placeholder]="placeholder"
-class="form-control">
+  type="text"
+  class="form-control"
+  [placeholder]="placeholder"
+  (keyup.enter)="emitValue( txtInput.value )"
+  #txtInput
+>
