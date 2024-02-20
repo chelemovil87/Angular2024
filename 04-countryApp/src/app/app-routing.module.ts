@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/home'
+    redirectTo: 'home'  // Redirect to home if the path is not found
   }
 ]
 @NgModule({
