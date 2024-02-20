@@ -23,7 +23,7 @@ const routes: Routes = [
     path: 'by/:id',
     component: CountryPageComponent
   },
-];
+]
 
 
 @NgModule({
@@ -31,7 +31,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [
-    RouterModule,
+    RouterModule
   ],
 
 })

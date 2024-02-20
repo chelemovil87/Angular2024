@@ -19,8 +19,12 @@ const routes: Routes = [
     component: ContactPageComponent
   },
   {
+    path: 'countries',
+    loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule)
+  },
+  {
     path: '**',
-    redirectTo: 'home'  // Redirect to home if the path is not found
+    redirectTo: ''  // Redirect to home if the path is not found
   }
 ]
 @NgModule({
